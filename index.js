@@ -108,6 +108,7 @@ app.use(cors());
 			currency: "EUR",
 			description: `Product Purchase #${id}`,
 			// payment_method: id,
+			
 			// confirm: true,
 			automatic_payment_methods: {
 				enabled: true,
