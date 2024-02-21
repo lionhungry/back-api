@@ -107,8 +107,11 @@ app.use(cors());
 			amount:amount*100,
 			currency: "EUR",
 			description: `Product Purchase #${id}`,
-			payment_method: id,
-			confirm: true
+			// payment_method: id,
+			// confirm: true,
+		    	automatic_payment_methods: {
+			    enabled: true,
+			},
 		})
 		// const reqCall = new Purchase({...req.body,card:payment,verified:false});
 		// await reqCall.save();
