@@ -109,8 +109,8 @@ app.use(cors());
 			description: `Product Purchase #${id}`,
 			// payment_method: id,
 			// confirm: true,
-		    	automatic_payment_methods: {
-			    enabled: true,
+			automatic_payment_methods: {
+				enabled: true,
 			},
 		})
 		// const reqCall = new Purchase({...req.body,card:payment,verified:false});
