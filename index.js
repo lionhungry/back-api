@@ -77,7 +77,7 @@ app.use(cors());
 		// const charge =
 		await stripe.charges.create({
 			amount:amount*100,
-			currency: 'usd',
+			currency: 'EUR',
 			source: token.id,
 			description: 'Product purchase #token.id',
 		});
@@ -103,7 +103,7 @@ app.use(cors());
 		// payment =
 	    await stripe.paymentIntents.create({
 			amount:amount*100,
-			currency: "USD",
+			currency: "EUR",
 			description: `Product Purchase #${id}`,
 			payment_method: id,
 			confirm: true
