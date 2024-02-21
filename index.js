@@ -100,6 +100,8 @@ app.use(cors());
   app.post('/payment', async (req, res) => {
 	let { amount, id } = req.body
 	try {
+		console.log(amount,'amount');
+		console.log(amount*100,'amount');
 		// payment =
 	    await stripe.paymentIntents.create({
 			amount:amount*100,
@@ -118,7 +120,8 @@ app.use(cors());
 		console.log("Error", error)
 		res.json({
 			message: "Payment failed",
-			success: false
+			success: false,
+			dataMessageValue:error
 		})
 	}
   })
